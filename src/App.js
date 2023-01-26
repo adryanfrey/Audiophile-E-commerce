@@ -1,5 +1,5 @@
 // hooks
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import { HashRouter , Routes, Route, Link } from 'react-router-dom'
 import { useState, useEffect } from 'react';
 
 // components
@@ -162,7 +162,7 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <div className='cart-button' onClick={() => handleCartClick()}>
           <i className="fa-solid fa-cart-shopping"></i>
         </div>
@@ -221,7 +221,7 @@ function App() {
           <Route path='/checkout' element={<Checkout totalPrice={totalPrice} items={items} removeAll={removeAll} />} />
         </Routes>
         <Footer />
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }

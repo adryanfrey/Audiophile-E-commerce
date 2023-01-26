@@ -1,0 +1,55 @@
+@use '../../sassStyles/mixins'
+
+.headphones
+    width: 100%
+
+    .title
+        min-height: 40vh
+        background: #000
+        width: 100%
+        display: flex
+        justify-content: center
+        padding-top: 11rem
+
+        h3
+            color: #fff
+
+    .group1
+        @include mixins.productCard
+        margin-top: 5rem
+        margin-bottom: 5rem
+
+    .group2
+        @include mixins.productCard
+        margin-bottom: 5rem
+        @include mixins.tablet
+            flex-direction: column-reverse
+
+    .group3
+        @include mixins.productCard
+        margin-bottom: 15rem
+        @include mixins.tablet  
+            margin-bottom: 0rem
+        @include mixins.mobile
+            margin-bottom: 14rem
+
+    .cards-container
+        display: flex
+        justify-content: space-between
+        width: 80%
+        margin: 0 auto
+        margin-top: 13rem
+        margin-bottom: 10rem
+        @include mixins.mobile
+            flex-direction: column
+            margin-top: 3rem
+            margin-bottom: 3rem
+
+        .card1-container
+            @include mixins.card1
+
+    .group4
+        width: 80%
+        margin: 0 auto
+        margin-bottom: 5vw
+        @include mixins.card-final

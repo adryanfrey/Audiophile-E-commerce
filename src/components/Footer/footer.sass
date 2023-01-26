@@ -1,0 +1,96 @@
+@use '../../sassStyles/mixins'
+
+.footer
+    background-color: #000
+    padding: 2rem 0 
+
+    &-container
+        width: 80%
+        margin: 0 auto
+        display: flex
+        @include mixins.tablet
+            flex-direction: column
+        @include mixins.smallTablet
+        
+            flex-direction: column-reverse
+
+        &-1
+            width: 50%
+            @include mixins.tablet
+                width: 100%
+            @include mixins.smallTablet     
+                text-align: center
+
+            h3
+                color: #fff
+                text-transform: lowercase
+                margin-top: 3vw
+
+            p
+                color: rgba(255, 255, 255, 0.6)
+                margin: 3vw 0
+
+        &-2
+            width: 50%
+            margin-top: 2.5rem
+            @include mixins.tablet
+                padding: 0
+                width: 100%
+                display: flex
+                align-items: center
+                margin-bottom: 4rem
+                justify-content: space-between
+                margin-top: 0
+                @include mixins.smallTablet
+                    flex-direction: column
+                    gap: 2rem
+
+            ul
+                display: flex
+                width: 450px
+                justify-content: space-between
+                margin-left: auto
+                @include mixins.mobile
+                    margin: 2rem 0
+
+                @include mixins.mobile
+                    flex-direction: column
+                    align-items: center
+                    gap: 1.5rem
+               
+
+                li 
+                    color: #fff
+                    text-transform: uppercase
+                    font-family: 'Manrope'
+                    font-style: normal
+                    font-weight: 700
+                    font-size: .9rem
+                    line-height: 25px
+                    letter-spacing: 2px
+                    text-transform: uppercase
+                    color: #fff
+                    display: inline-block
+                    transition: .4s
+                    cursor: pointer
+
+                    &:hover
+                        transform: scale(0.9)
+
+
+            .social-media
+                margin-top: 12rem 
+                margin-left: auto
+                width: 150px
+                @include mixins.tablet
+                    margin: 0
+                    
+                i
+                    color: #fff
+                    font-size: 2rem
+                    margin-left: 1rem
+                    cursor: pointer
+                    transition: .4s
+                    
+                    &:hover
+                        transform: scale(0.9)

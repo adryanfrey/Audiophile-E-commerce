@@ -1,0 +1,488 @@
+@use './variables'
+
+@mixin tablet
+    @media(max-width: 1150px)
+        @content
+@mixin smallTablet 
+    @media(max-width: 950px)
+        @content
+@mixin mobile
+    @media(max-width: 650px)
+        @content
+
+
+@mixin card1
+    position: relative
+    display: flex
+    flex-direction: column
+    padding-bottom: 1rem
+    align-items: center
+    background-color: variables.$grey-dark
+    width: 32%
+    min-height: 16vw
+    border-radius: 8px
+    cursor: pointer
+    transition: .4s
+    @include mobile
+        width: 100%
+        margin-bottom: 17vw
+
+    &:hover
+        transform: scale(0.9)
+
+    img
+        width: 40%
+        position: absolute
+        top: 0
+        transform: translate(0, -50%)
+        z-index: 2
+        @include mobile
+            width: 30%
+
+    .box-shadow
+        background: rgba(1, 1, 1, .7)
+        width: 35%
+        height: 20%
+        top: 15%
+        border-radius: 50px
+        filter: blur(25px)
+        margin-bottom: 2rem
+        position: absolute
+        @include mobile
+            width: 25%
+
+    h6
+        margin-bottom: 0.5rem
+        z-index: 2
+        margin-top: 10vw
+        @include smallTablet
+            font-size: 1rem
+            margin-top: 14vw
+        @include mobile
+            margin-top: 23vw
+           
+
+
+    button
+        color: rgba(0, 0, 0, 0.5)
+        position: relative
+        font-weight: 550
+        font-size: 1rem
+        z-index: 2
+        margin-bottom: 1rem
+
+        &:hover
+            transform: scale(1)
+
+        @include smallTablet
+            font-size: .9rem
+           
+
+        img
+            width: 10px
+            position: absolute
+            top: 9px
+            right: -25px
+
+@mixin card-final
+    display: flex
+    @include tablet
+        flex-direction: column
+        gap: 2rem
+    @include mobile
+            flex-direction: column-reverse  
+
+    &-text
+        width: 50%
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        padding-right: 8vw
+        @include tablet
+            width: 100%
+            text-align: center
+            padding-right: 0
+
+        h2
+            margin-bottom: 2rem
+            width: 100%
+
+            span
+                color: variables.$orange-color
+
+    &-img
+       background: url('../assets/Bitmap.png') center no-repeat
+       background-size: cover 
+       min-height: 382px
+       width: 50%
+       border-radius: 10px
+       @include tablet
+            background: url('../assets/finalImgTablet.png') center no-repeat
+            background-size: cover
+            width: 100%
+
+@mixin productCard
+    display: flex
+    width: 80%
+    margin: 0 auto
+    @include tablet
+        flex-direction: column
+
+    .mark2-img
+        width: 50%
+        background: url('../assets/Group1.png') no-repeat center
+        background-size: cover
+        height: 37vw
+        @include tablet 
+            background: url('../assets/mark2taablet.png') no-repeat center
+            width: 100%
+            background-size: cover
+        @include mobile 
+            background: url('../assets/Group1.png') no-repeat center
+            background-size: cover
+            height: 70vw
+
+
+
+    .mark1-img
+        width: 60%
+        background: url('../assets/Group3.png') no-repeat center
+        background-size: cover
+        height: 40vw
+        @include tablet 
+            background: url('../assets/mark1taablet.png') no-repeat center
+            width: 100%
+            background-size: cover
+        @include mobile 
+            background: url('../assets/Group3.png') no-repeat center
+            background-size: cover
+            height: 70vw
+
+
+    .xx59-img
+        width: 60%
+        background: url('../assets/Group2.png') no-repeat center
+        background-size: cover
+        height: 40vw
+        @include tablet 
+            background: url('../assets/xx59taablet.png') no-repeat center
+            width: 100%
+            background-size: cover
+        @include mobile 
+            background: url('../assets/Group2.png') no-repeat center
+            background-size: cover
+            height: 70vw
+
+    .zx9-img
+        width: 60%
+        background: url('../assets/Group5.png') no-repeat center
+        background-size: cover
+        height: 40vw
+        @include tablet 
+            background: url('../assets/zx9taablet.png') no-repeat center
+            width: 100%
+            background-size: cover
+        @include mobile 
+            background: url('../assets/Group5.png') no-repeat center
+            background-size: cover
+            height: 70vw
+        
+    .zx7-img
+        width: 60%
+        background: url('../assets/Group6.png') no-repeat center
+        background-size: cover
+        height: 40vw
+        @include tablet 
+            background: url('../assets/zx7taablet.png') no-repeat center
+            width: 100%
+            background-size: cover
+        @include mobile 
+            background: url('../assets/Group6.png') no-repeat center
+            background-size: cover
+            height: 70vw
+
+    .yx1-img
+        width: 60%
+        background: url('../assets/Group7.png') no-repeat center
+        background-size: cover
+        height: 40vw
+        @include tablet 
+            background: url('../assets/yx1taablet.png') no-repeat center
+            width: 100%
+            background-size: cover
+        @include mobile 
+            background: url('../assets/Group7.png') no-repeat center
+            background-size: cover
+            height: 70vw
+
+    &-text
+        width: 60%
+        display: flex
+        justify-content: center
+        flex-direction: column
+        padding: 0 6vw
+        @include tablet
+            width: 100%
+            text-align: center
+            margin-top: 2rem
+
+        .overline
+            color: variables.$orange-color
+            margin-bottom: 1rem
+
+        .body
+            color: rgba(0, 0, 0, 0.6)
+            margin: 2vw 0
+        
+        button
+           @include tablet
+                margin: 0 auto
+
+    &-text-left
+        width: 60%
+        display: flex
+        justify-content: center
+        flex-direction: column
+        padding-right: 10vw
+        @include tablet
+            width: 100%
+            text-align: center
+            margin-top: 2rem
+            padding: 0
+
+        p
+            margin: 2vw 0
+
+        .body
+            color: rgba(0, 0, 0, 0.6)
+
+        button
+            @include tablet
+                margin: 0 auto
+@mixin productDetail
+    &-mark2
+        width: 45%
+        background: url('../assets/Group1.png') no-repeat center
+        background-size: cover
+        min-height: 500px
+        @include smallTablet
+            background: url('../assets/mark2Tablet.png') no-repeat center
+            background-size: cover
+            height: 60vw
+        @media(max-width: 760px)
+            background: url('../assets/Group1.png') no-repeat center
+            background-size: cover
+            width: 100%
+
+            
+    &-mark1
+        width: 45%
+        background: url('../assets/Group3.png') no-repeat center
+        background-size: cover
+        min-height: 500px
+        @include smallTablet
+            background: url('../assets/mark1Tablet.png') no-repeat center
+            background-size: cover
+            height: 60vw
+        @media(max-width: 760px)
+            background: url('../assets/Group3.png') no-repeat center
+            background-size: cover
+            width: 100%
+    
+    &-xx59
+        width: 45%
+        background: url('../assets/Group2.png') no-repeat center
+        background-size: cover
+        min-height: 500px
+        @include smallTablet
+            background: url('../assets/xx59Tablet.png') no-repeat center
+            background-size: cover
+            height: 60vw
+        @media(max-width: 760px)
+            background: url('../assets/Group2.png') no-repeat center
+            background-size: cover
+            width: 100%
+    
+    &-zx9
+        width: 45%
+        background: url('../assets/Group5.png') no-repeat center
+        background-size: cover
+        min-height: 500px
+        @include smallTablet
+            background: url('../assets/zx9Tablet.png') no-repeat center
+            background-size: cover
+            height: 60vw
+        @media(max-width: 760px)
+            background: url('../assets/Group5.png') no-repeat center
+            background-size: cover
+            width: 100%
+    
+    &-zx7
+        width: 45%
+        background: url('../assets/Group6.png') no-repeat center
+        background-size: cover
+        min-height: 500px
+        @include smallTablet
+            background: url('../assets/zx7Tablet.png') no-repeat center
+            background-size: cover
+            height: 60vw
+        @media(max-width: 760px)
+            background: url('../assets/Group6.png') no-repeat center
+            background-size: cover
+            width: 100%
+    
+    &-yx1
+        width: 45%
+        background: url('../assets/Group7.png') no-repeat center
+        background-size: cover
+        min-height: 500px
+        @include smallTablet
+            background: url('../assets/yx1Tablet.png') no-repeat center
+            background-size: cover
+            height: 60vw
+        @media(max-width: 760px)
+            background: url('../assets/Group7.png') no-repeat center
+            background-size: cover
+            width: 100%
+
+    &-text
+        width: 55%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        padding-left: 10%
+        @media(max-width: 760px)
+            width: 100%
+            text-align: start
+            padding: 0
+            margin-bottom: 5rem
+
+        .overline
+            color: variables.$orange-color
+            @media(max-width: 760px)
+                margin-top: 2rem
+
+        h2
+            margin-top: 1rem
+            margin-bottom: 1.5rem
+            @media(max-width: 760px)
+                margin: 2rem 0
+
+        .price
+            font-weight: bold
+            margin: 1.5rem 0
+
+        div
+            display: flex
+            align-items: center
+
+            button
+                min-width: 100px
+                margin-left: 1rem
+                @media(max-width: 900px)
+                    font-size: .8rem
+
+            .quantity
+                display: flex
+                width: 150px
+                min-width: 150px
+                background-color: variables.$grey-dark
+                height: 100%
+
+                .number
+                    font-weight: bold
+
+                .symbols
+                    color: rgba(0, 0, 0, 0.5)
+                    cursor: pointer
+                    transition: .4s
+
+                    &:hover
+                        background-color: #dcdcdc
+                        color: rgba(0, 0, 0, 1)
+
+                p
+                    width: 33%
+                    text-align: center
+                    height: 100%
+                    line-height: 55px
+
+@mixin otherProducts
+    @include mobile 
+        margin-bottom: 15rem
+    h3
+        text-align: center
+        margin-bottom: 3vw
+
+    .imgs-container
+        display: flex
+        width: 100%
+        gap: 2vw
+        @media(max-width: 760px)
+            flex-direction: column
+            gap: 5rem
+
+        .other-products-card
+            display: flex
+            flex-direction: column
+            width: 33%
+            gap: 2vw
+            align-items: center
+            @media(max-width: 760px)
+                width: 100%
+                
+            .mark1-img
+                background: url('../assets/Group3.png') no-repeat center
+                background-size: cover
+                width: 100%
+                height: 220px
+                @media(max-width: 760px)
+                    background: url('../assets/mark1taablet.png') no-repeat center
+                    background-size: cover
+                    height: 250px
+                    width: 100%
+            
+            .xx59-img
+                background: url('../assets/Group2.png') no-repeat center
+                background-size: cover
+                width: 100%
+                height: 220px
+                @media(max-width: 760px)
+                    background: url('../assets/xx59taablet.png') no-repeat center
+                    background-size: cover
+                    height: 250px
+                    width: 100%
+
+            .zx9-img
+                background: url('../assets/Group5.png') no-repeat center
+                background-size: cover
+                width: 100%
+                height: 220px
+                @media(max-width: 760px)
+                    background: url('../assets/zx9taablet.png') no-repeat center
+                    background-size: cover
+                    height: 250px
+                    width: 100%
+
+            .zx7-img
+                background: url('../assets/Group6.png') no-repeat center
+                background-size: cover
+                width: 100%
+                height: 220px
+                @media(max-width: 760px)
+                    background: url('../assets/zx7taablet.png') no-repeat center
+                    background-size: cover
+                    height: 250px
+                    width: 100%
+            
+            .mark2-img
+                background: url('../assets/Group1.png') no-repeat center
+                background-size: cover
+                width: 100%
+                height: 220px
+                @media(max-width: 760px)
+                    background: url('../assets/mark2taablet.png') no-repeat center
+                    background-size: cover
+                    height: 250px
+                    width: 100%

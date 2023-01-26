@@ -1,0 +1,276 @@
+@use '../../sassStyles/mixins'
+@use '../../sassStyles/variables'
+
+.home-main
+    display: flex
+    background: url('../../assets/home/desktop/image-hero.jpg') no-repeat center
+    background-size: cover
+    min-height: 100vh
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+
+    @include mixins.tablet
+        background: url('../../assets/bg2.png') no-repeat center
+        background-size: cover
+        min-height: 90vh
+
+    .space
+        height: 50px
+        width: 100%
+
+    &-container1
+        width: 80%
+        
+        @include mixins.tablet
+            display: flex
+            flex-direction: column
+            align-items: center
+            text-align: center
+
+        p, button, h1
+            color: variables.$ligth
+
+        .overline
+            color: variables.$grey-dark
+            width: 300px
+
+        p
+            margin: 2rem 0
+            color: rgba(255, 255, 255, .7)
+            width: 30%
+            @include mixins.tablet
+                width: 60%
+            @include mixins.smallTablet
+                width: 65%
+            @include mixins.mobile
+                width: 70%
+
+.home-section
+    margin: 0 auto
+    width: 80%
+    padding-top: 10vw
+    padding-bottom: 7vw
+
+    .cards-container
+        display: flex
+        justify-content: space-between
+        @include mixins.mobile
+            flex-direction: column
+            margin-top: 5rem
+            margin-bottom: 3rem
+
+        .card1-container
+            @include mixins.card1
+
+    .group1
+        display: flex
+        width: 100%
+        background-color: variables.$orange-color
+        margin: 0 auto
+        margin-top: 5vw
+        min-height: 38vw
+        overflow: hidden
+        @include mixins.smallTablet
+            flex-direction: column
+            border-radius: 10px
+
+        @include mixins.mobile
+            margin-top: 0
+            border-radius: 15px
+
+        &-container
+            width: 50%
+            display: flex
+            justify-content: center
+            flex-direction: column
+            position: relative
+            z-index: 1
+            @include mixins.smallTablet
+                width: 100%
+
+            img
+                width: 70%
+                z-index: 3
+                transform: translate(35%, 13%)
+                @include mixins.smallTablet
+                    margin: 3rem auto
+                    width: 30%
+                    transform: translate(0, 0)
+                @include mixins.mobile
+                    width: 50%
+
+            &-text
+                margin: 0 auto
+                padding-right: 2rem
+                @include mixins.smallTablet
+                    text-align: center
+                    margin-bottom: 3rem
+                    width: 80%
+                    padding-right: 0
+
+                h1
+                    color: variables.$ligth
+
+                p
+                    color: variables.$ligth
+                    margin: 2vw 0
+                    @include mixins.mobile
+                        margin: 5vw 0
+
+                button
+                    color: variables.$ligth
+                    background: black
+                    border: none
+                    @include mixins.mobile
+                        width: 70%
+                        font-size: 0.9rem
+
+                    &:hover
+                        color: black
+                        background: variables.$ligth
+
+            .circle1
+                border: 1px solid rgba(255, 255, 255, .5)
+                position: absolute
+                height: 31vw
+                width: 31vw
+                bottom: -19%
+                left: 21.5%
+                border-radius: 30vw
+                z-index: 2
+                @include mixins.smallTablet
+                    left: 15%
+                    height: 55vw
+                    width: 55vw
+                    border-radius: 55vw
+                @include mixins.mobile
+                    width: 70vw
+                    height: 70vw
+                    border-radius: 70vw
+                    left: 6.5%
+                    bottom: 0%
+
+            .circle2
+                position: absolute
+                border: 1px solid rgba(255, 255, 255, .5)
+                position: absolute
+                height: 36vw
+                width: 36vw
+                bottom: -26%
+                left: 15%
+                border-radius: 30vw
+                z-index: 2
+                @include mixins.smallTablet
+                    left: 10%
+                    height: 63vw
+                    width: 63vw
+                    bottom: -28%
+                    border-radius: 63vw
+                @include mixins.mobile
+                    width: 80vw
+                    height: 80vw
+                    border-radius: 80vw
+                    left: 0%
+                    bottom: -6%
+
+            .circle3
+                position: absolute
+                border: 1px solid rgba(255, 255, 255, .5)
+                position: absolute
+                height: 68vw
+                width: 68vw
+                bottom: -72%
+                left: -23%
+                border-radius: 65vw
+                z-index: 2
+                @include mixins.smallTablet
+                    left: -7%
+                    height: 90vw
+                    width: 90vw
+                    bottom: -60%
+                    border-radius: 90vw
+                @include mixins.mobile
+                    left: -33%
+                    height: 135vw
+                    width: 135vw
+                    bottom: -60%
+                    border-radius: 114vw
+
+    .group2
+        width: 100%
+        margin-top: 4vw
+        background: url('../../assets/home/desktop/image-speaker-zx7.jpg') no-repeat
+        background-size: contain
+        min-height: 23vw
+        background-position: 100%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        @include mixins.smallTablet
+            margin-top: 4vw
+            background: url('../../assets/zx7smallTablet.png') no-repeat center
+            background-size: cover
+            height: 300px
+            border-radius: 10px
+        @include mixins.mobile
+            background: url('../../assets/zx7mobile.png') no-repeat center
+            background-size: cover
+            margin-bottom: 1.5rem
+            height: 400px
+
+
+
+        h3
+            margin-left: 8%
+            margin-bottom: 4%
+
+        button
+            margin-left: 8%
+
+    .group3
+        width: 100%
+        display: flex
+        margin-top: 4vw
+        @include mixins.smallTablet
+            min-height: 300px
+            border-radius: 10px
+            overflow: hidden
+            
+
+        @include mixins.mobile
+            margin-top: 0vw
+            flex-direction: column
+            
+
+        &-container
+            width: 50%
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: column
+            gap: 2rem
+            overflow: hidden
+            @include mixins.mobile
+                width: 100%
+
+            img
+                width: 100%
+                @include mixins.smallTablet
+                    width: fit-content
+                
+
+        .gray-bg
+            background: variables.$grey-dark
+            
+            @include mixins.smallTablet
+                padding: 0 2rem
+                text-align: center
+            @include mixins.mobile  
+                padding: 2rem 0
+            
+
+    .group4
+        @include mixins.card-final
+        margin-top: 7rem

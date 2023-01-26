@@ -1,0 +1,71 @@
+@use '../../sassStyles/variables'
+@use '../../sassStyles/mixins'
+
+.header
+    left: 9.8%
+    position: absolute
+    width: 80%
+
+    &-container
+        padding: 2rem 0
+        display: flex
+        justify-content: space-between
+        align-items: center
+        border-bottom: 1px solid rgba(255, 255, 255, .3)
+        background: transparent
+
+        .burguer
+            color: #fff
+            font-size: 2rem
+            margin-left: .2rem
+            display: none
+            cursor: pointer
+            @include mixins.tablet
+                display: block
+                
+
+        .logo-container
+            display: flex
+            align-items: center
+            gap: 2rem
+
+            h4
+                text-transform: lowercase
+                color: #fff
+                font-size: 1.7rem
+
+        .navbar-container
+            transform: translate(-15%, 0)
+            @include mixins.tablet
+                display: none
+
+            ul
+                display: flex
+                gap: 34px
+                color: #fff
+
+                li
+                    a
+                        font-family: 'Manrope'
+                        font-style: normal
+                        font-weight: 700
+                        font-size: .9rem
+                        line-height: 25px
+                        letter-spacing: 2px
+                        text-transform: uppercase
+                        color: #fff
+                        display: inline-block
+                        transition: .4s
+
+                        &:hover
+                            transform: scale(0.9)
+
+        .icon-container
+            i
+                color: #fff
+                font-size: 1.5rem
+                cursor: pointer
+                transition: .4s
+                
+                &:hover
+                    transform: scale(0.9)

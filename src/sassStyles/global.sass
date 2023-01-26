@@ -1,0 +1,248 @@
+@use './variables'
+@use './mixins'
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+html
+    scroll-behavior: smooth
+
+a
+    text-decoration: none
+
+ul
+    list-style: none 
+
+button
+    width: 200px
+    height: 55px
+    text-align: center
+    line-height: 48px
+    transition: .4s
+    border: none
+    cursor: pointer
+    font-size: 1rem
+    text-transform: uppercase
+    &:hover
+        transform: scale(0.9)
+ 
+.btn-1
+    color: variables.$ligth
+    background-color: variables.$orange-color
+    
+    &:hover
+        background-color: variables.$orange-light
+
+.btn-2
+    color: variables.$dark-color
+    border: 1px solid variables.$dark-color
+    background-color: transparent
+
+    &:hover
+        color: variables.$ligth
+        background: variables.$dark-color
+    
+.btn-3
+    color: variables.$dark-color
+    background-color: transparent
+    width: auto
+    height: auto  
+    line-height: 20px 
+
+    i
+        color: variables.$orange-color
+
+    &:hover
+        color: variables.$orange-color
+    
+#root, body, html
+    height: 100%
+
+.cart-button
+    position: fixed
+    bottom: 3vw
+    right: 3vw
+    width: 70px
+    height: 70px
+    background-color: #878787
+    border-radius: 70px
+    display: none
+    align-items: center
+    justify-content: center
+    color: #fff
+    cursor: pointer
+    transition: .4s
+    z-index: 100
+
+    &:hover
+        transform: scale(0.9)
+
+.cart-container
+    width: 30%
+    min-width: 450px
+    position: absolute
+    right: 12rem
+    top: 8rem
+    padding: 2rem
+    font-family: 'Manrope', sans-serif
+    background: #fff
+    border-radius: 8px
+    display: none
+    z-index: 20
+    @include mixins.smallTablet
+        width: 60%
+        top: 10vw
+        right: 10vw
+        min-width: 500px
+    @include mixins.mobile 
+        width: 80%
+        top: 130px
+        left: 0
+        right: 0
+        margin: 0 auto
+        min-width: 0
+        
+    
+
+    .title
+        display: flex
+        justify-content: space-between
+        margin-bottom: 1rem
+
+        p
+            cursor: pointer
+            font-weight: bold
+            font-size: 1.2rem
+            @include mixins.smallTablet
+                font-size: 1.5rem
+        
+        .gray-text
+            color: rgba(0,0 ,0 , 0.7)
+            font-weight: normal
+            font-size: 1rem
+            transition: .4s
+            @include mixins.smallTablet
+            font-size: 1.3rem
+            
+            &:hover
+                transform: scale(0.9)
+                
+
+    .cart-item-container
+        display: flex
+        align-items: center
+        margin-bottom: 1rem 
+
+        img
+            width: 70px
+            margin-right: 1rem
+            height: 70px
+            @include mixins.smallTablet
+                width: 70px
+                height: 70px
+
+        .cart-items-price
+            display: flex
+            gap: .4rem
+            flex-direction: column
+            gap: 1.3vw    
+            
+
+            .name
+                font-weight: bold
+                text-transform: uppercase
+                @media(max-width: 420px)
+                    font-size: 0.9rem   
+
+            .price
+                color: rgba(0, 0, 0, 0.6)
+                @include mixins.smallTablet
+                    font-size: 1.1rem
+                @media(max-width: 420px)
+                    font-size: 0.9rem
+
+
+
+        .cart-items-quantity
+            margin-left: auto
+            display: flex
+            background: variables.$grey-dark
+            align-items: center
+            height: 30px
+            justify-content: center
+            @include mixins.smallTablet
+                height: 50px
+            @media(max-width: 570px)
+                height: 30px
+            @media(max-width: 420px)
+                margin-left: 10px
+            
+            p
+                width: 30px
+                height: 100%
+                text-align: center
+                cursor: pointer
+                line-height: 30px
+                transition: .4s
+                @include mixins.smallTablet
+                    width: 50px
+                    line-height: 50px
+                @media(max-width: 570px)
+                    width: 30px
+                    line-height: 30px
+
+            .quantityManagement:hover
+                background-color: #dcdcdc
+
+    .cart-total
+        display: flex
+        justify-content: space-between
+        margin-top: 1.5rem
+
+        .text
+            text-transform: uppercase
+            color: rgba(0, 0, 0, 0.6)
+
+        .total-price
+            font-weight: bold
+
+    button
+        width: 100%
+        margin-top: 1.5rem
+        height: 50px
+        
+        a
+            color: #fff
+            width: 100%
+            height: 100%
+            display: inline-block
+    
+    .back
+        text-align: center
+        margin-top: 1rem
+        border-bottom:  1px solid black
+        width: 40px
+        margin: 0 auto
+        margin-top: 1.5rem
+        cursor: pointer
+        transition: .4s
+
+        &:hover
+            transform: scale(0.9)
+
+.filter
+    width: 100%
+    height: 200vh
+    position: absolute
+    background-color: rgba(0, 0, 0, 0.6)
+    z-index: 10
+    display: none
+    
+#root 
+    --toastify-toast-width: 350px
+ 
+
+       
+        

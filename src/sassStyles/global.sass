@@ -28,31 +28,35 @@ button
     cursor: pointer
     font-size: 1rem
     text-transform: uppercase
-    &:hover
-        transform: scale(0.9)
     &:active
         transform: scale(0.9)
+@media (hover:hover)
+    button:hover
+        transform: scale(0.9)
+    
  
 .btn-1
     color: variables.$ligth
     background-color: variables.$orange-color
-    
-    &:hover
-        background-color: variables.$orange-light
     &:active
         background-color: variables.$orange-light
+@media (hover:hover)   
+    .btn-1:hover
+        background-color: variables.$orange-light
+    
 
 .btn-2
     color: variables.$dark-color
     border: 1px solid variables.$dark-color
     background-color: transparent
-
-    &:hover
-        color: variables.$ligth
-        background: variables.$dark-color
     &:active
         color: variables.$ligth
         background: variables.$dark-color
+@media (hover:hover)   
+    .btn-2:hover
+        color: variables.$ligth
+        background: variables.$dark-color
+    
     
 .btn-3
     color: variables.$dark-color
@@ -60,14 +64,15 @@ button
     width: auto
     height: auto  
     line-height: 20px 
+    &:active
+        color: variables.$orange-color
 
     i
         color: variables.$orange-color
-
-    &:hover
+@media (hover:hover)
+    .btn-3:hover
         color: variables.$orange-color
-    &:active
-        color: variables.$orange-color
+    
     
 #root, body, html
     height: 100%
@@ -87,11 +92,12 @@ button
     cursor: pointer
     transition: .4s
     z-index: 100
-
-    &:hover
-        transform: scale(0.9)
     &:active
         transform: scale(0.9)
+@media (hover:hover)
+    .cart-button:hover
+        transform: scale(0.9)
+    
 
 .cart-container
     width: 30%
@@ -139,11 +145,12 @@ button
             transition: .4s
             @include mixins.smallTablet
             font-size: 1.3rem
-            
-            &:hover
-                transform: scale(0.9)
             &:active
                 transform: scale(0.9)
+        @media (hover:hover)
+            .gray-text:hover
+                transform: scale(0.9)
+            
                 
 
     .cart-item-container
@@ -246,11 +253,12 @@ button
         margin-top: 1.5rem
         cursor: pointer
         transition: .4s
-
-        &:hover
-            transform: scale(0.9)
         &:active
             transform: scale(0.9)
+    @media (hover:hover)
+        .back:hover
+            transform: scale(0.9)
+       
 
 .filter
     width: 100%

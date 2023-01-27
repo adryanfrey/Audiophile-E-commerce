@@ -94,6 +94,7 @@ const Checkout = ({ totalPrice, items, removeAll }) => {
     // payment success button 
     const paymentSuccess = () => {
         removeAll()
+        window.scrollTo(0,0)
         setDisplaySuccess(false)
         navigate('/')
         

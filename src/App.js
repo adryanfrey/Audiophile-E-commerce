@@ -62,6 +62,9 @@ function App() {
     if (items.length > 0) {
       const cartButton = document.querySelector('.cart-button')
       cartButton.style.display = 'flex'
+    } else {
+      const cartButton = document.querySelector('.cart-button')
+      cartButton.style.display = 'none'
     }
   }, [items])
 

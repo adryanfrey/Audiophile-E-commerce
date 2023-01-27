@@ -26,12 +26,13 @@
     @include mobile
         width: 100%
         margin-bottom: 17vw
+    &:active
+         transform: scale(1)   
 
     &:hover
         transform: scale(0.9)
-    &:active
-        transform: scale(0.9)
-
+        @include mobile
+            transform: scale(1)
     img
         width: 40%
         position: absolute
@@ -73,11 +74,6 @@
         z-index: 2
         margin-bottom: 1rem
 
-        &:hover
-            transform: scale(0.9)
-        &:active
-            transform: scale(0.9)
-
         @include smallTablet
             font-size: .9rem
            
@@ -87,6 +83,13 @@
             position: absolute
             top: 9px
             right: -25px
+        &:active
+            transform: scale(0.9)
+            
+    @media (hover:hover)
+        button:hover
+            transform: scale(0.9)
+        
 
 @mixin card-final
     display: flex
@@ -408,13 +411,15 @@
                     color: rgba(0, 0, 0, 0.5)
                     cursor: pointer
                     transition: .4s
-
-                    &:hover
-                        background-color: #dcdcdc
-                        color: rgba(0, 0, 0, 1)
                     &:active
                         background-color: #dcdcdc
                         color: rgba(0, 0, 0, 1)
+                        
+                @media (hover:hover)
+                    .symbols:hover
+                        background-color: #dcdcdc
+                        color: rgba(0, 0, 0, 1)
+                    
 
                 p
                     width: 33%

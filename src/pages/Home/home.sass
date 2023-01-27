@@ -129,13 +129,14 @@
                         @include mixins.mobile
                             width: 70%
                             font-size: 0.9rem
-
-                        &:hover
-                            color: black
-                            background: variables.$ligth
                         &:active
                             color: black
                             background: variables.$ligth
+                    @media (hover:hover)
+                        button:hover
+                            color: black
+                            background: variables.$ligth
+                        
 
                 .circle1
                     border: 1px solid rgba(255, 255, 255, .5)

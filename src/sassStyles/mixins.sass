@@ -29,6 +29,8 @@
 
     &:hover
         transform: scale(0.9)
+    &:active
+        transform: scale(0.9)
 
     img
         width: 40%
@@ -72,7 +74,9 @@
         margin-bottom: 1rem
 
         &:hover
-            transform: scale(1)
+            transform: scale(0.9)
+        &:active
+            transform: scale(0.9)
 
         @include smallTablet
             font-size: .9rem
@@ -399,6 +403,9 @@
                     transition: .4s
 
                     &:hover
+                        background-color: #dcdcdc
+                        color: rgba(0, 0, 0, 1)
+                    &:active
                         background-color: #dcdcdc
                         color: rgba(0, 0, 0, 1)
 

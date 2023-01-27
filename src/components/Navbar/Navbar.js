@@ -3,16 +3,80 @@ import './navbar.sass'
 
 // hooks
 import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+
+// assets
+import img5 from '../../assets/home/desktop/image-removebg-preview(38).png'
+import img6 from '../../assets/home/desktop/earphones.png'
+import img7 from '../../assets/home/desktop/image-removebg-preview(41).png'
+import chevron from '../../assets/home/desktop/chevron.png'
+
+// hooks
+import { useState, useEffect } from 'react'
 
 
-const Navbar = ({displayCart}) => { 
+const Navbar = ({ displayCart }) => {
+  // states
+  const [expand, setExpand] = useState(false)
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+
+  const navigate = useNavigate('')
+
+  // navigation
+  const handleClick = (page) => {
+    setExpand(false)
+    navigate(page)
+    window.scrollTo(0, 0)
+  }
+
+  // expand navbar
+  const expandNavbar = () => {
+    if (expand === false) {
+      setExpand(true)
+    } else {
+      setExpand(false)
+    }
+  }
+
+  useEffect(() => {
+    const navbar = document.querySelector('.navbar-tablet')
+    const filterNavbar = document.querySelector('.filter-navbar')
+
+    if (expand === true) {
+      navbar.style.display = 'flex'
+      filterNavbar.style.display = 'block'
+    } else {
+      navbar.style.display = 'none'
+      filterNavbar.style.display = 'none'
+    }
+
+  },[expand])
+
+  // colapse navbar if window size > 1100px
+  useEffect(() => {
+    const handleResizeWindow = () => setWindowWidth(window.innerWidth)
+
+    window.addEventListener('resize', handleResizeWindow)
+
+    return () => {
+      window.removeEventListener('resize', handleResizeWindow)
+    }
+  },[])
+
+  if(windowWidth > 1150) {
+    const navbar = document.querySelector('.navbar-tablet')
+    const filterNavbar = document.querySelector('.filter-navbar') 
+
+    navbar.style.display = 'none'
+    filterNavbar.style.display = 'none'
+  }
 
   return (
     <header className='header'>
       <div className='header-container'>
-        
+
         <div className="logo-container">
-          <i className="fa-solid fa-bars burguer"></i>
+          <i onClick={expandNavbar} className="fa-solid fa-bars burguer"></i>
           <h4>audiophile</h4>
         </div>
         <div className='navbar-container'>
@@ -29,6 +93,32 @@ const Navbar = ({displayCart}) => {
           <i className="fa-solid fa-cart-shopping"></i>
         </div>
       </div>
+
+      <div className='navbar-tablet'>
+        <div onClick={() => handleClick('headphones')} className='card1-container'>
+          <img src={img7} alt="" />
+          <div className='box-shadow'></div>
+          <h6>headphones</h6>
+          <button className='btn-3' >SHOP <img src={chevron} alt="chevron" /></button>
+        </div>
+
+        <div onClick={() => handleClick('speakers')} className='card1-container'>
+          <img src={img5} alt="" />
+          <div className='box-shadow'></div>
+          <h6>speakers</h6>
+          <button className='btn-3'>SHOP <img src={chevron} alt="chevron" />  </button>
+        </div>
+
+        <div onClick={() => handleClick('earphones')} className='card1-container'>
+          <img src={img6} alt="" />
+          <div className='box-shadow'></div>
+          <h6>earphones</h6>
+          <button className='btn-3'>SHOP <img src={chevron} alt="chevron" /> </button>
+        </div>
+      </div>
+
+
+      <div className='filter-navbar'></div>
 
     </header>
   )

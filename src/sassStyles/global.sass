@@ -8,6 +8,13 @@
 
 html
     scroll-behavior: smooth
+    width: 100%
+    overflow-x: hidden
+
+body 
+    width: 100%
+    overflow-x: hidden
+    position: relative
 
 a
     text-decoration: none
@@ -27,12 +34,16 @@ button
     text-transform: uppercase
     &:hover
         transform: scale(0.9)
+    &:active
+        transform: scale(0.9)
  
 .btn-1
     color: variables.$ligth
     background-color: variables.$orange-color
     
     &:hover
+        background-color: variables.$orange-light
+    &:active
         background-color: variables.$orange-light
 
 .btn-2
@@ -41,6 +52,9 @@ button
     background-color: transparent
 
     &:hover
+        color: variables.$ligth
+        background: variables.$dark-color
+    &:active
         color: variables.$ligth
         background: variables.$dark-color
     
@@ -55,6 +69,8 @@ button
         color: variables.$orange-color
 
     &:hover
+        color: variables.$orange-color
+    &:active
         color: variables.$orange-color
     
 #root, body, html
@@ -77,6 +93,8 @@ button
     z-index: 100
 
     &:hover
+        transform: scale(0.9)
+    &:active
         transform: scale(0.9)
 
 .cart-container
@@ -127,6 +145,8 @@ button
             font-size: 1.3rem
             
             &:hover
+                transform: scale(0.9)
+            &:active
                 transform: scale(0.9)
                 
 
@@ -195,6 +215,8 @@ button
 
             .quantityManagement:hover
                 background-color: #dcdcdc
+            .quantityManagement:active
+                background-color: #dcdcdc
 
     .cart-total
         display: flex
@@ -231,6 +253,8 @@ button
 
         &:hover
             transform: scale(0.9)
+        &:active
+            transform: scale(0.9)
 
 .filter
     width: 100%
@@ -241,8 +265,12 @@ button
     display: none
     
 #root 
+    width: 100%
     --toastify-toast-width: 350px
- 
+    .Toastify__toast-container 
+        @include mixins.mobile
+            right: 0
+            top: 4.5%
 
        
         

@@ -21,6 +21,9 @@
             &:hover
                 transform: scale(0.9)
                 border-bottom: 1px solid #000
+            &:active
+                transform: scale(0.9)
+                border-bottom: 1px solid #000
 
     .product
         width: 80%
@@ -131,6 +134,8 @@
         margin: 0 auto
         margin-bottom: 15vw
         @include mixins.otherProducts
+        @include mixins.mobile
+            margin-bottom: 10rem
 
     .cards-container
         display: flex

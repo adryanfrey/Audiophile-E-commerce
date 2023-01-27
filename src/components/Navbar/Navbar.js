@@ -57,7 +57,7 @@ const Navbar = ({ displayCart }) => {
     const handleResizeWindow = () => setWindowWidth(window.innerWidth)
 
     window.addEventListener('resize', handleResizeWindow)
-
+    
     return () => {
       window.removeEventListener('resize', handleResizeWindow)
     }
@@ -67,9 +67,16 @@ const Navbar = ({ displayCart }) => {
     const navbar = document.querySelector('.navbar-tablet')
     const filterNavbar = document.querySelector('.filter-navbar') 
 
-    navbar.style.display = 'none'
-    filterNavbar.style.display = 'none'
+    if (navbar === null || filterNavbar === null) {
+      console.log('Welcome')
+    } else {
+      navbar.style.display = 'none'
+      filterNavbar.style.display = 'none'
+    }
+
   }
+
+  
 
   return (
     <header className='header'>

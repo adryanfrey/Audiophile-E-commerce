@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Audiophile-E-commerce/static/css/main.be6695aa.css",
-    "main.js": "/Audiophile-E-commerce/static/js/main.07eae442.js",
+    "main.css": "/Audiophile-E-commerce/static/css/main.b9c96927.css",
+    "main.js": "/Audiophile-E-commerce/static/js/main.a7d7da44.js",
     "static/media/Bitmap6.png": "/Audiophile-E-commerce/static/media/Bitmap6.a65f27890e4e4a46e913.png",
     "static/media/finalImgTablet.png": "/Audiophile-E-commerce/static/media/finalImgTablet.0bcf9dbbf96f3ffedca7.png",
     "static/media/zx7smallTablet.png": "/Audiophile-E-commerce/static/media/zx7smallTablet.167bf951cc053a72c8d3.png",
@@ -50,11 +50,11 @@
     "static/media/image-hero.jpg": "/Audiophile-E-commerce/static/media/image-hero.fb7f46173fa4c819c755.jpg",
     "static/media/image-speaker-zx7.jpg": "/Audiophile-E-commerce/static/media/image-speaker-zx7.3d4940e89ebadd9beb50.jpg",
     "index.html": "/Audiophile-E-commerce/index.html",
-    "main.be6695aa.css.map": "/Audiophile-E-commerce/static/css/main.be6695aa.css.map",
-    "main.07eae442.js.map": "/Audiophile-E-commerce/static/js/main.07eae442.js.map"
+    "main.b9c96927.css.map": "/Audiophile-E-commerce/static/css/main.b9c96927.css.map",
+    "main.a7d7da44.js.map": "/Audiophile-E-commerce/static/js/main.a7d7da44.js.map"
   },
   "entrypoints": [
-    "static/css/main.be6695aa.css",
-    "static/js/main.07eae442.js"
+    "static/css/main.b9c96927.css",
+    "static/js/main.a7d7da44.js"
   ]
 }

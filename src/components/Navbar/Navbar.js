@@ -66,7 +66,7 @@ const Navbar = ({ displayCart }) => {
   if(windowWidth > 1150) {
     const navbar = document.querySelector('.navbar-tablet')
     const filterNavbar = document.querySelector('.filter-navbar') 
-
+   
     if (navbar === null || filterNavbar === null) {
       console.log('Welcome')
     } else {
@@ -76,7 +76,27 @@ const Navbar = ({ displayCart }) => {
 
   }
 
-  
+// back button on mobile navbar
+
+  if(windowWidth > 650) {
+    const back = document.querySelector('.back-navbar')
+    console.log(back)
+    if (back === null) {
+      console.log('Welcome')
+    } else {
+      back.style.display = 'none'
+    }
+  }
+
+  if(windowWidth < 651) {
+    const back = document.querySelector('.back-navbar')
+    console.log(back)
+    if (back === null) {
+      console.log('Welcome')
+    } else {
+      back.style.display = 'block'
+    }
+  }
 
   return (
     <header className='header'>
@@ -122,8 +142,11 @@ const Navbar = ({ displayCart }) => {
           <h6>earphones</h6>
           <button className='btn-3'>SHOP <img src={chevron} alt="chevron" /> </button>
         </div>
-      </div>
 
+        <div onClick={() => setExpand(false)} className='back-navbar'>
+          Back
+        </div>
+      </div>
 
       <div className='filter-navbar'></div>
 

@@ -119,7 +119,7 @@ const Checkout = ({ totalPrice, items, removeAll }) => {
             }
         }
         checkArray()
-    }, [])
+    }, [items])
 
     if (items.length === 0) {
         return

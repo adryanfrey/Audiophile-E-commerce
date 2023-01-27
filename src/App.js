@@ -155,7 +155,8 @@ function App() {
   }
 
   const handleCartClick = () => {
-    window.scrollTo(0, 0)
+    window.scrollTo(0,0)
+
     if (window.pageYOffset < 400) {
       displayCart()
     } else {

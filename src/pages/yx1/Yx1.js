@@ -66,7 +66,7 @@ const Yx1 = ({ addItem }) => {
                             <p className='body number'>{quantity}</p>
                             <p className='body symbols' onClick={() => handleQuantity('+')}>+</p>
                         </div>
-                        <button onClick={() => handleCart({ name: 'YX1 EARPHONES', price: 599, quantity: quantity })} className='btn-1'>add to cart</button>
+                        <button onClick={() => handleCart({ name: 'YX1', price: 599, quantity: quantity })} className='btn-1'>add to cart</button>
                     </div>
                 </div>
             </section>

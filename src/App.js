@@ -125,7 +125,7 @@ function App() {
       case 'XX59 HEADPHONES':
         return xx59
 
-      case 'YX1 EARPHONES':
+      case 'YX1':
         return yx1
     }
   }

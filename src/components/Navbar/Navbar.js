@@ -68,7 +68,6 @@ const Navbar = ({ displayCart }) => {
     const filterNavbar = document.querySelector('.filter-navbar') 
    
     if (navbar === null || filterNavbar === null) {
-      console.log('Welcome')
     } else {
       navbar.style.display = 'none'
       filterNavbar.style.display = 'none'
@@ -80,9 +79,7 @@ const Navbar = ({ displayCart }) => {
 
   if(windowWidth > 650) {
     const back = document.querySelector('.back-navbar')
-    console.log(back)
     if (back === null) {
-      console.log('Welcome')
     } else {
       back.style.display = 'none'
     }
@@ -90,9 +87,7 @@ const Navbar = ({ displayCart }) => {
 
   if(windowWidth < 651) {
     const back = document.querySelector('.back-navbar')
-    console.log(back)
     if (back === null) {
-      console.log('Welcome')
     } else {
       back.style.display = 'block'
     }

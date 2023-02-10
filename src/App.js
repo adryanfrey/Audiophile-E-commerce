@@ -93,12 +93,25 @@ function App() {
 
   // add items to the cart
   const addItem = (product) => {
+
     if (product.quantity === 0) {
       toast.warn('Select the quantity you want')
       return
     }
-    setItems([...items, product])
-    toast.success('Item added to the cart')
+
+    const checkItem = items.find((item) => item.name === product.name)
+
+    if (checkItem === undefined) {
+      setItems([...items, product])
+      toast.success('Item added to the cart')
+    } else {
+      console.log('passou')
+      setItems(items.map((item) => {
+        return {...item, quantity: item.quantity + product.quantity}
+      }))
+      toast.success('Item added to the cart')
+    }
+    
   }
 
 
